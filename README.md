@@ -8,7 +8,7 @@ UITabBarController, UINavigationController, UIScrollView, UITableView를 연습�
 
 ## 가이드
 
-[코드스쿼드 pr연습](https://github.com/code-squad/java-pr-practice)을 참조해주세요.
+[코드스쿼드 pr연습](https://github.com/code-squad/java-lotto)을 참조해주세요.
 
 
 ## 실제 화면
