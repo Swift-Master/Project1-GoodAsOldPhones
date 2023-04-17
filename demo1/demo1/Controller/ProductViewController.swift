@@ -1,8 +1,10 @@
-
 import UIKit
 
-class ProductViewController: UIViewController {
+final class ProductViewController: UIViewController {
 
+    
+    private var currentProduct : Product?
+    
     private let productTableView = UITableView()
     
     let productList : [Product] = [
@@ -61,10 +63,22 @@ extension ProductViewController : UITableViewDataSource {
     
 }
 
-extension ProductViewController : UITableViewDelegate {
+extension ProductViewController : UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
-        self.navigationController?.pushViewController(ProductDetailViewController(), animated: true)
+        
+        let nextVC = ProductDetailViewController()
+        
+        nextVC.delegate = self
+        currentProduct = productList[indexPath.row]
+        self.navigationController?.pushViewController(nextVC, animated: true)
     }
 
 }
+
+extension ProductViewController : ProductDetailViewDelegate {
+    func didReceiveData() -> Product? {
+        return currentProduct
+    }
+    
+}
+
