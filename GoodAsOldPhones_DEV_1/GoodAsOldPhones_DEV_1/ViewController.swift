@@ -12,11 +12,14 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         
-        print("Producs 화면")
     }
 
-
+    // 상세 화면 이동 버튼
+    @IBAction func goDetail(_ sender: UIButton) {
+        let detailVC = self.storyboard?.instantiateViewController(identifier: "detail") as! DetailViewController
+        self.navigationController?.pushViewController(detailVC, animated: true)
+    }
+    
 }
 
