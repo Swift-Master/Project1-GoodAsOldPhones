@@ -81,13 +81,41 @@
                     <view key="view" contentMode="scaleToFill" id="jJI-Yi-Jf2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gg7-aP-skr">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cho-6z-reA">
+                                <rect key="frame" x="112" y="168" width="150" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1984 Moto Portable" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uBz-kU-BAx">
+                                <rect key="frame" x="85.5" y="50" width="204" height="27"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="GNb-EI-PTz"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gg7-aP-skr" firstAttribute="top" secondItem="GNb-EI-PTz" secondAttribute="top" id="I8E-7b-AT8"/>
+                            <constraint firstItem="gg7-aP-skr" firstAttribute="leading" secondItem="GNb-EI-PTz" secondAttribute="leading" id="dy9-YO-1ca"/>
+                            <constraint firstItem="GNb-EI-PTz" firstAttribute="trailing" secondItem="gg7-aP-skr" secondAttribute="trailing" id="ifK-dl-ztc"/>
+                            <constraint firstItem="GNb-EI-PTz" firstAttribute="bottom" secondItem="gg7-aP-skr" secondAttribute="bottom" id="jL7-ld-O93"/>
+                            <constraint firstItem="uBz-kU-BAx" firstAttribute="centerX" secondItem="jJI-Yi-Jf2" secondAttribute="centerX" id="p5a-ca-RnU"/>
+                            <constraint firstItem="uBz-kU-BAx" firstAttribute="top" secondItem="GNb-EI-PTz" secondAttribute="top" constant="50" id="tXz-R8-00q"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="addToCartImageView" destination="cho-6z-reA" id="Kxo-Xd-78H"/>
+                        <outlet property="backgroundImageView" destination="gg7-aP-skr" id="Itd-Gn-2ri"/>
+                        <outlet property="titleLabel" destination="uBz-kU-BAx" id="Lyl-9L-fnN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3MG-g8-THL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2854" y="-344"/>
+            <point key="canvasLocation" x="2853.5999999999999" y="-344.07796101949026"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="9JI-9K-UgG">
