@@ -1,16 +1,9 @@
-//
-//  CustomTableViewCell.swift
-//  demo1
-//
-//  Created by 최우태 on 2023/04/15.
-//
-
 import UIKit
 
 
-class CustomTableViewCell: UITableViewCell {
+final class CustomTableViewCell: UITableViewCell {
     
-    
+    // MARK: - UI 객체 선언부
     lazy var productImage : UIImageView = {
         let configuration = UIImageView()
         configuration.translatesAutoresizingMaskIntoConstraints = false
@@ -26,7 +19,7 @@ class CustomTableViewCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        self.accessoryType = .disclosureIndicator
+        self.accessoryType = .disclosureIndicator //네비게이션을 위한 악세사리 설정
         setUI()
     }
     
@@ -34,6 +27,7 @@ class CustomTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - UI 설정
     func setUI() {
         [productImage,productName].forEach {self.contentView.addSubview($0)}
         

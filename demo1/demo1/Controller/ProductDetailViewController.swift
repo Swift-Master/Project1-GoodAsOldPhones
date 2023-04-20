@@ -1,14 +1,18 @@
 import UIKit
 
+// MARK: - 데이터 수신을 위한 커스텀 프로토콜 정의
 protocol ProductDetailViewDelegate : AnyObject {
     
     func didReceiveData() -> Product?
 }
 
 final class ProductDetailViewController: UIViewController {
-     
+    
+    // delegate 패턴을 위한 프로토콜 타입의 변수 선언
     var delegate : ProductDetailViewDelegate?
     
+    
+    // MARK: - 화면 객체들 선언
     lazy var productNameLabel = {
         let set = UILabel()
         set.translatesAutoresizingMaskIntoConstraints = false
@@ -37,8 +41,8 @@ final class ProductDetailViewController: UIViewController {
         setConstraint()
     }
     
+    // MARK: - 이전 뷰의 데이터를 받아 저장하고 배경을 설정합니다.
     func setUI() {
-        self.view.backgroundColor = .white
         if let product = getProduct() {
             
             productNameLabel.text = product.name
@@ -50,8 +54,10 @@ final class ProductDetailViewController: UIViewController {
         
     }
     
+    // MARK: - 화면 레이아웃을 설정합니다
     func setConstraint() {
         [productNameLabel,purchaseButton,backgroundImageView].forEach{self.view.addSubview($0)}
+        //배경이미지가 가장 모든 뷰 중 가장 뒤로 가도록 합니다.
         view.sendSubviewToBack(backgroundImageView)
         NSLayoutConstraint.activate([
             productNameLabel.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: 60),
@@ -67,10 +73,12 @@ final class ProductDetailViewController: UIViewController {
         ])
     }
     
+    // MARK: - 프로토콜 메서드를 통해 데이터를 가져옵니다.
     func getProduct() -> Product? {
         return delegate?.didReceiveData()
     }
     
+    // MARK: - 버튼을 눌렀을 때 실행되는 메서드입니다.
     @objc func addToCart() {
         print("Add to cart successfully")
     }

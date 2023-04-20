@@ -18,6 +18,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window = UIWindow(windowScene: windowScene)
         
+        
+        // MARK: - 탭바 구현 및 Products 탭은 네비게이션 컨트롤러로 구현
         let tabVC = UITabBarController()
         let tab1 = UINavigationController(rootViewController: ProductViewController())
         let tab2 = ContactViewController()
@@ -27,7 +29,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         tabVC.tabBar.backgroundColor = .clear
         
         guard let tabBarItems = tabVC.tabBar.items else {return}
-        
+        //탭바 이름 지정
         tabBarItems[0].title = "Products"
         tabBarItems[1].title = "Us"
 
