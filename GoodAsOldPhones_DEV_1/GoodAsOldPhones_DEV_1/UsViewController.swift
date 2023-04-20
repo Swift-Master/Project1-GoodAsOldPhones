@@ -10,37 +10,25 @@ import UIKit
 // Us
 class UsViewController: UIViewController {
 
-    var usTopImage: UIImage!
+    // 상단 이미지
     @IBOutlet weak var usTopImageView: UIImageView!
     
-    var emailImage: UIImage!
+    // 하단 이미지
     @IBOutlet weak var emailImageView: UIImageView!
-    
-    var telImage: UIImage!
     @IBOutlet weak var telImageView: UIImageView!
-    
-    var urlImage: UIImage!
     @IBOutlet weak var urlImageView: UIImageView!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // 상단 이미지 설정
-        usTopImage = UIImage(named: "header-contact")
-        usTopImageView.image = usTopImage
+        usTopImageView.image = UIImage(named: "header-contact")
         
         // 하단 Contact 이미지 설정
-        emailImage = UIImage(named: "icon-about-email")
-        emailImageView.image = emailImage
+        emailImageView.image = UIImage(named: "icon-about-email")
+        telImageView.image = UIImage(named: "icon-about-phone")
+        urlImageView.image = UIImage(named: "icon-about-website")
         
-        telImage = UIImage(named: "icon-about-phone")
-        telImageView.image = telImage
-        
-        urlImage = UIImage(named: "icon-about-website")
-        urlImageView.image = urlImage
-        
-
     }
 
 }
