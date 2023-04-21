@@ -18,3 +18,8 @@ UITabBarController, UINavigationController, UIScrollView, UITableView를 연습�
     - 내부에 배치한 서브뷰들은 제약에 신경써서 작업하진 않았습니다.
 
 #### 20230420
+- Products 화면 구현
+    - TableView와 TableViewCell을 이용하여 화면 구성
+    - TableView Section 설정으로 레퍼런스와 같은 위, 아래 공백 생성
+- NavigationController
+    - Products 화면에서 TableCell을 눌렀을 때 Detail 화면 이동
