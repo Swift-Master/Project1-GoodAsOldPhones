@@ -25,4 +25,4 @@ UITabBarController, UINavigationController, UIScrollView, UITableView를 연습�
     - Products 화면에서 TableCell을 눌렀을 때 Detail 화면 이동
 
 ### 구현 화면
-![GoodAsOldPhones-DEV_1](./GoodAsOldPhone-DEV_1.gif)
+<img src="./GoodAsOldPhone-DEV_1.gif" width="200" height="400"/>
